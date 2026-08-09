@@ -1,0 +1,16 @@
+[AC][SuspendAndShutdown]
+AutoSuspendIdleTimeoutSec=300
+PowerButtonAction=1
+
+[Battery][SuspendAndShutdown]
+PowerButtonAction=1
+
+[BatteryManagement]
+BatteryCriticalLevel=10
+BatteryLowLevel=20
+
+[LowBattery][Performance]
+PowerProfile=power-saver
+
+[LowBattery][SuspendAndShutdown]
+PowerButtonAction=32

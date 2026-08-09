@@ -1,0 +1,30 @@
+#!/bin/bash
+case "$1" in
+  start)
+    systemctl --user start odysseus
+    echo "Odysseus started."
+    ;;
+  stop)
+    systemctl --user stop odysseus
+    echo "Odysseus stopped."
+    ;;
+  restart)
+    systemctl --user restart odysseus
+    echo "Odysseus restarted."
+    ;;
+  status)
+    systemctl --user status odysseus
+    ;;
+  logs)
+    journalctl --user -u odysseus -n 100 -f
+    ;;
+  open|browse)
+    xdg-open http://127.0.0.1:7000
+    ;;
+  *)
+    echo "Odysseus status: $(systemctl --user is-active odysseus)"
+    echo "Web UI: http://127.0.0.1:7000"
+    echo ""
+    echo "Usage: odysseus [start|stop|restart|status|logs|open]"
+    ;;
+esac
