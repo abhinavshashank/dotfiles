@@ -1,8 +1,8 @@
-# Arch Linux Dotfiles 🚀
+# Arch Linux Dotfiles
 
 Personal configuration files for **Arch Linux** on a **Framework 13 (AMD Ryzen AI 300 Series)** running **KDE Plasma 6 (KWin Wayland)**.
 
-## 🧰 Software & Tools Included
+## Software & Tools Included
 * **Terminal:** [Ghostty](https://ghostty.org/) & [Foot](https://codeberg.org/dnkl/foot)
 * **Shell:** [Fish](https://fishshell.com/) + [Starship](https://starship.rs/) prompt + [Zoxide](https://github.com/ajeetdsouza/zoxide)
 * **CLI Enhancements:** `eza` (`ls`), `bat` (`cat`), `btop` (monitoring), `fastfetch`
@@ -10,7 +10,7 @@ Personal configuration files for **Arch Linux** on a **Framework 13 (AMD Ryzen A
 * **GUI & Theming:** KDE Plasma 6 + [Kvantum](https://github.com/tsujan/Kvantum) + [Klassy](https://github.com/paulmcauley/klassy) + Panel Colorizer
 * **Compositor / Lock:** Hyprland & Hyprlock configurations
 
-## 📂 Repository Structure
+## Repository Structure
 ```
 .
 └── config/
@@ -30,7 +30,7 @@ Personal configuration files for **Arch Linux** on a **Framework 13 (AMD Ryzen A
     └── starship.toml
 ```
 
-## 🛠️ Quick Restore
+## Quick Restore
 To sync these configurations to a new system:
 ```bash
 git clone https://github.com/abhinavshashank/dotfiles.git ~/.dotfiles
