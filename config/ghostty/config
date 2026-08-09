@@ -1,0 +1,23 @@
+# Ghostty Configuration
+
+# Shell
+# (Will use default login shell unless fish is installed)
+command = fish
+
+# Font
+font-family = "JetBrains Mono Nerd Font"
+font-size = 12
+
+# Window Settings
+window-padding-x = 25
+window-padding-y = 25
+window-width = 100
+window-height = 30
+background-opacity = 0.78
+
+# Cursor Settings
+cursor-style = bar
+
+# KDE/Plasma Integration
+# Forces server-side decorations (KWin titlebars) for seamless desktop integration
+window-decoration = server
