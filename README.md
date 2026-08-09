@@ -3,6 +3,7 @@
 Personal configuration files for **Arch Linux** on a **Framework 13 (AMD Ryzen AI 300 Series)** running **KDE Plasma 6 (KWin Wayland)**.
 
 ## Software & Tools Included
+* **Thermal & Fan Control:** [fw-fanctrl](https://github.com/Tamm215/fw-fanctrl) + custom `fan` helper (`fan fast` / `fan medium` / `fan default`)
 * **Terminal:** [Ghostty](https://ghostty.org/) & [Foot](https://codeberg.org/dnkl/foot)
 * **Shell:** [Fish](https://fishshell.com/) + [Starship](https://starship.rs/) prompt + [Zoxide](https://github.com/ajeetdsouza/zoxide)
 * **CLI Enhancements:** `eza` (`ls`), `bat` (`cat`), `btop` (monitoring), `fastfetch`
@@ -20,6 +21,8 @@ Personal configuration files for **Arch Linux** on a **Framework 13 (AMD Ryzen A
 │   ├── cava/
 │   ├── fastfetch/
 │   ├── fish/
+│   │   └── functions/
+│   │       └── fan.fish
 │   ├── foot/
 │   ├── fuzzel/
 │   ├── ghostty/
@@ -30,6 +33,9 @@ Personal configuration files for **Arch Linux** on a **Framework 13 (AMD Ryzen A
 │   ├── kde/
 │   ├── Kvantum/
 │   └── starship.toml
+├── etc/
+│   └── fw-fanctrl/
+│       └── config.json
 ├── local/
 │   ├── bin/
 │   └── share/plasma/plasmoids/
@@ -45,6 +51,10 @@ git clone https://github.com/abhinavshashank/dotfiles.git ~/.dotfiles
 cp -r ~/.dotfiles/config/* ~/.config/
 cp -r ~/.dotfiles/local/share/plasma/plasmoids/* ~/.local/share/plasma/plasmoids/
 cp -r ~/.dotfiles/local/bin/* ~/.local/bin/
+
+# Framework Fan Controller setup
+sudo cp -r ~/.dotfiles/etc/fw-fanctrl /etc/
+sudo systemctl enable --now fw-fanctrl
 
 # Reinstall official Arch packages
 sudo pacman -S --needed - < ~/.dotfiles/packages/pkglist.txt
